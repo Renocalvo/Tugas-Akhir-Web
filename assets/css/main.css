@@ -1,0 +1,172 @@
+
+/*--------------------------------------------------------------
+# Admin - landing page
+--------------------------------------------------------------*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+}
+
+.sidenav {
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Tambahkan shadow pada sidebar */
+  min-height: 100vh;
+}
+
+.sidenav .nav-link {
+  color: #5a5a5a;
+}
+
+.sidenav .nav-link.active {
+  background-color: #ffeded;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.content {
+  padding: 20px;
+  flex: 1;
+}
+
+.footer {
+  position: fixed;
+  background-color:  rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan shadow pada footer */
+}
+
+.profile-img img {
+  max-width: 80px;
+  margin: 10px auto;
+}
+
+.admin-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #ff5722;
+}
+
+.navbar-top {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan shadow pada navbar */
+  padding: 15px;
+  z-index: 1030;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Footer Styling
+--------------------------------------------------------------*/
+
+.footer .copyright {
+  margin-bottom: 5px;
+}
+
+.footer .credits {
+  font-size: 13px;
+  color: rgba(39, 40, 41, 0.6);
+}
+
+.footer .credits a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# .article Styling (Main Content Area)
+--------------------------------------------------------------*/
+.article {
+  margin-left: 800px; /* Offset the width of the sidebar */
+  padding: 20px; /* Add padding for spacing inside the .article */
+  flex: 1; /* Allow .article to expand and take the remaining space */ /* Optional: Different background color */
+  color: var(--default-color); /* Text color */
+  overflow-y: auto; /* Ensure scrolling if content exceeds the viewport */
+  min-height: 100vh; /* Ensure .article fills the full height of the screen */
+}
+
+.container-content{
+    background-color: white;
+    box-shadow: 5px 5px 10px gray;
+}
+
+
+.header-question{
+    font-family: "Milonga", serif;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+.actions button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+img {
+  max-width: 100px;
+  height: auto;
+}
+/*--------------------------------------------------------------
+# Responsive Design
+--------------------------------------------------------------*/
+@media (max-width: 1199px) {
+  .header {
+    transform: translateX(-100%);
+  }
+
+  .header.header-show {
+    transform: translateX(0);
+  }
+
+  .header .header-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    transform: translateX(0);
+  }
+
+  .header ~ main, .header ~ footer {
+    margin-left: 300px;
+  }
+}

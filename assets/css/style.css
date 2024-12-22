@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Milonga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Kreon:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* universal */
+/* *,
+html {
+    font-family: Poppins;
+} */
+
+body {
+    background-color: #F8F7F3;
+    font-family: "Inria Sans", serif;
+    overflow: -moz-scrollbars-none;
+    /* Untuk browser Firefox */
+    -ms-overflow-style: none;
+    /* Untuk Internet Explorer dan Edge */
+    scrollbar-width: none;
+    /* Untuk Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Untuk browser berbasis Webkit seperti Chrome, Safari */
+}
+
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+::-ms-reveal {
+    filter: invert(100%);
+}
+
+/* end of universal */
+
+/* navbar */
+.navbar {
+    font-family: "Inria Serif", serif;
+}
+
+.vertical-line {
+    height: 30px;
+    border: 1px solid black;
+}
+
+nav {
+    position: sticky;
+    border-radius: 0 0 10px 10px;
+    max-width: 80%;
+    box-shadow: 0 0 10px black;
+}
+
+/* end of navbar */
+
+/* login and register form */
+/* form group for login and register*/
+.form-group {
+    margin-bottom: 4vh;
+    display: flex;
+    position: relative;
+}
+
+.label-form {
+    position: absolute;
+    transition: all 300ms ease;
+    margin: 1vh;
+    color: white;
+}
+
+.form-control:focus~.label-form,
+.form-control:not(:placeholder-shown)~.label-form {
+    font-size: 14px;
+    transform: translate3d(0, -26px, 0);
+    opacity: 1;
+    color: white;
+}
+
+/* Snackbar form for login and register*/
+.snackbar {
+    visibility: hidden;
+    /* Hidden by default */
+    min-width: 250px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 9999;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+}
+
+/* Snackbar Background Colors */
+.snackbar-error {
+    background-color: #d9534f;
+    /* Red for error */
+}
+
+.snackbar-success {
+    background-color: #5cb85c;
+    /* Green for success */
+}
+
+.snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* animation pop up fade out snackbar form login register */
+@keyframes fadein {
+
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 20px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+/* end login end register form */
+/* landing page */
+.tagline {
+    text-align: left;
+    font-size: 120px;
+    font-family: "Milonga", serif;
+}
+
+.tag-layanan,
+.container-title-klinik {
+    font-family: "Milonga", serif;
+    font-size: 70px;
+}
+
+.tag-feeling,
+.tag-feeling a {
+    font-family: "Kreon", serif;
+}
+
+.sub-title {
+    text-align: left;
+    font-size: 80px;
+    font-family: "Milonga", serif;
+}
+
+.thumbnail-home {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.card-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 25px;
+}
+
+.card-content {
+    background-color: white;
+    border-radius: 15px;
+    min-width: 6rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-content img {
+    border-radius: 15px;
+    height: 4.5rem;
+    width: 4.5rem;
+}
+
+.card-content:hover,
+.active {
+    border: 2px solid #BB8446;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(210, 164, 13, 0.655);
+}
+
+.info-box .box-button {
+    display: none;
+
+}
+
+/* layanan page */
+.required-dot {
+    color: red;
+}
+
+.form-group-layanan label {
+    display: block;
+    margin-bottom: 8px;
+    /* Menambah jarak antar label dan input */
+    color: grey;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #e39494;
+}
+
+/* end layanan page */
+
+/* klinikpage */
+.profile-card {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+.tag-psikolog {
+    font-family: "Milonga", serif;
+    font-size: 70px;
+}
+
+/* end klinikpage*/
+
+/* lihatprofile */
+.container-profile {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.picture-view {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* end lihatprofile */
+
+.about-treatment, .treatment-content{
+    font-family: "Milonga", serif;
+
+}
+
