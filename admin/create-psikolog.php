@@ -2,13 +2,14 @@
 $pageTitle = "layanan Page - Healpoint";
 include './inc/inc_adminheader.php';
 ?>
+<link rel="stylesheet" href="../assets/css/main.css">
 <main>
     <section>
         <div class="container mb-5">
             <div class="bg-white p-4">
                 <div class="row about-treatment">
                     <div class="col-md-3 text-center">
-                        <img src="assets/layananpage.png" width="130" class="img-thumbnail" alt="...">
+                        <img src="../assets/layananpage.png" width="130" class="img-thumbnail" alt="...">
                     </div>
 
                     <div class="col-md-6">
@@ -20,7 +21,7 @@ include './inc/inc_adminheader.php';
                     </div>
 
                     <div class="col-md-3 text-center">
-                        <img src="assets/layananpage1.png" width="200" class="img-thumbnail" alt="...">
+                        <img src="../assets/layananpage1.png" width="200" class="img-thumbnail" alt="...">
                     </div>
                 </div>
 
@@ -163,5 +164,5 @@ include './inc/inc_adminheader.php';
     });
 </script>
 <?php
-include './inc/inc_adminfooter.php';
+include '../inc/inc_adminfooter.php';
 ?>

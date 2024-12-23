@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'inc/inc_connection.php';
+require_once '../inc/inc_connection.php';
 
 // Periksa apakah pengguna sudah login
 if (!isset($_SESSION['user_id'])) {
@@ -53,7 +53,7 @@ if (isset($_POST['logout'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
@@ -64,13 +64,13 @@ if (isset($_POST['logout'])) {
         <nav class="col-md-3 col-lg-2 sidenav d-flex flex-column p-3">
             <!-- Logo -->
             <a class="navbar-brand" href="landingpage.php">
-                <img src="./assets/logo.png" width="80" height="80" alt="">
+                <img src="../assets/logo.png" width="80" height="80" alt="">
                 <span style="font-size:30px; font-weight:bolder; margin-left:-20px; color:grey;">Healpoint</span>
             </a>
 
             <!-- Profile Image -->
             <div class="profile-img text-center">
-                <img src="assets/profile.jpg" alt="Profile" class="img-fluid rounded-circle">
+                <img src="../assets/profile.jpg" alt="Profile" class="img-fluid rounded-circle">
             </div>
 
             <!-- Admin Name -->

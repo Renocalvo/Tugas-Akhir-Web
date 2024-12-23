@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../assets/css/style.css">
+
 <footer class="text-center text-lg-start" style="background-color: #001547;">
     <div class="container d-flex justify-content-center py-5">
       <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">

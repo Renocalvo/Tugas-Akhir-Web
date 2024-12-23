@@ -18,7 +18,7 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title><?php echo isset($pageTitle) ? $pageTitle : "Default Title"; ?></title>
 </head>
@@ -26,7 +26,7 @@ if (!isset($_SESSION['user_id'])) {
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto">
         <a class="navbar-brand" href="landingpage.php" style="font-size: 30px;">
-            <img src="./assets/logo.png" width="80" height="80" alt=""> Healpoint
+            <img src="../assets/logo.png" width="80" height="80" alt=""> Healpoint
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@ if (!isset($_SESSION['user_id'])) {
                     <span class="full-name"><?php echo htmlspecialchars($fullName); ?></span>
                 </div>
                 <?php
-                    $defaultImage = 'assets/default-profile.png';
+                    $defaultImage = '../assets/default-profile.png';
                     $imagePath = ''; // Ubah sesuai dengan gambar pengguna jika tersedia
                 ?>
                 <img src="<?php echo $imagePath; ?>" 

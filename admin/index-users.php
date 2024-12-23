@@ -1,7 +1,7 @@
 <?php
-require_once 'inc/inc_connection.php';
+require_once '../inc/inc_connection.php';
 $pageTitle = "Users Admin Panel - Healpoint";
-include './inc/inc_adminheader.php';
+include '../inc/inc_adminheader.php';
 
 $records_per_page = 10;
 
@@ -110,6 +110,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <?php 
-    include './inc/inc_adminfooter.php'; 
+    include '../inc/inc_adminfooter.php'; 
 ?>
 

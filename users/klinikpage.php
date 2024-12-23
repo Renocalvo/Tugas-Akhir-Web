@@ -1,12 +1,12 @@
 <?php 
     $pageTitle = "Klinik Page - Healpoint";
-    include './inc/inc_header.php'; 
+    include '../inc/inc_header.php'; 
 ?>
 <section>
     <div class="container-fluid mt-5" style="background-color:white;">
         <div class="row" style="background-color: white; padding: 30px 0 20px 0;">
             <div class="col-md-3 pl-5">
-                <img src="assets/layananpage.png" width="200" class="img-thumbnail"
+                <img src="../assets/layananpage.png" width="200" class="img-thumbnail"
                     style="background-color: transparent; border: none;" alt="...">
             </div>
             <div class="col-md-6">
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="col-md-3 pl-5">
-                <img src="assets/layananpage1.png" width="270" style="background-color: transparent; border: none;"
+                <img src="../assets/layananpage1.png" width="270" style="background-color: transparent; border: none;"
                     class="img-thumbnail" alt="...">
             </div>
         </div>
@@ -36,7 +36,7 @@
         </div>
         <div class="row">
             <?php
-            require_once "./inc/inc_connection.php";
+            require_once "../inc/inc_connection.php";
             $sql = "SELECT id, name, specialization, bio, contact, 
                     (SELECT image_path FROM psychologist_images WHERE psychologist_id = psychologists.id LIMIT 1) as image_path
                     FROM psychologists";
@@ -81,5 +81,5 @@
 </section>
 
 <?php 
-    include './inc/inc_footer.php'; 
+    include '../inc/inc_footer.php'; 
 ?>

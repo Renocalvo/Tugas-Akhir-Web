@@ -1,12 +1,12 @@
 <?php 
     $pageTitle = "layanan Page - Healpoint";
-    include './inc/inc_header.php'; 
+    include '../inc/inc_header.php'; 
 ?>
 <section>
     <div class="container-fluid tag-layanan">
         <div class="row" style="background-color: white; padding: 30px 0 20px 0;">
             <div class="col-md-3 pl-5">
-                <img src="assets/layananpage.png" width="200" class="img-thumbnail"
+                <img src="../assets/layananpage.png" width="200" class="img-thumbnail"
                     style="background-color: transparent; border: none;" alt="...">
             </div>
             <div class="col-md-6">
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="col-md-3 pl-5">
-                <img src="assets/layananpage1.png" width="270" style="background-color: transparent; border: none;"
+                <img src="../assets/layananpage1.png" width="270" style="background-color: transparent; border: none;"
                     class="img-thumbnail" alt="...">
             </div>
         </div>
@@ -32,7 +32,7 @@
             <div class="form-container">
                 <div id="snackbar" class="snackbar">This is a snackbar alert!</div>
                 <?php
-                    require_once "./inc/inc_connection.php";
+                    require_once "../inc/inc_connection.php";
 
                     if (isset($_POST["submit"])) {
                         $age = $_POST["age"];
@@ -148,5 +148,5 @@
     </div>
 </section>
 <?php 
-    include './inc/inc_footer.php'; 
+    include '../inc/inc_footer.php'; 
 ?>
