@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once './inc/inc_connection.php';
+require_once '../inc/inc_connection.php';
 
 // Ensure the user is logged in
 if (!isset($_SESSION['user_id'])) {

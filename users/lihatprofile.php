@@ -1,7 +1,7 @@
 <?php 
     $pageTitle = "Detail Psikolog - Healpoint";
-    include './inc/inc_header.php'; 
-    require_once "./inc/inc_connection.php";
+    include '../inc/inc_header.php'; 
+    require_once "../inc/inc_connection.php";
 
     // Check if the ID is passed as a parameter
     if (isset($_GET['id'])) {
@@ -64,5 +64,5 @@
         </div>
     </section>
 <?php 
-    include './inc/inc_footer.php'; 
+    include '../inc/inc_footer.php'; 
 ?>

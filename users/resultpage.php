@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once './inc/inc_connection.php';
+require_once '../inc/inc_connection.php';
 if (!isset($_SESSION['user_id'])) {
     echo "Anda harus login untuk melihat hasil kuis.";
     exit();
@@ -34,7 +34,7 @@ $quiz_result = mysqli_fetch_assoc($result);
 <body>
   <section>
     <div class="container-fluid"
-      style="color:white; background:url(assets/6205209.jpg); justify-content: center; align-items: center; display: flex; flex-direction: column; background-size:cover;">
+      style="color:white; background:url(../assets/6205209.jpg); justify-content: center; align-items: center; display: flex; flex-direction: column; background-size:cover;">
       <div class="container mt-5"
         style="max-width: 70%; justify-content: center; align-items: center; display: flex; flex-direction: column;">
         <h4>Hasil Test Psikologi Burn-out</h4>
@@ -55,7 +55,7 @@ $quiz_result = mysqli_fetch_assoc($result);
         <p>Anda belum mengikuti tes.</p>
         <?php endif; ?>
 
-        <img src="assets/rb_2318.png"
+        <img src="../assets/rb_2318.png"
           style="filter: drop-shadow(5px 5px black); background-color: transparent; border: none; max-width: 50vh;"
           class="img-thumbnail mt-3" alt="...">
         <h5>
@@ -71,7 +71,7 @@ $quiz_result = mysqli_fetch_assoc($result);
     </div>
   </section>
   <?php 
-    include './inc/inc_footer.php'; 
+    include '../inc/inc_footer.php'; 
 ?>
 
 </html>

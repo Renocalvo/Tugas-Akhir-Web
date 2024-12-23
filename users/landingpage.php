@@ -1,6 +1,6 @@
 <?php 
     $pageTitle = "Landing Page - Healpoint";
-    include './inc/inc_header.php'; 
+    include '../inc/inc_header.php'; 
 ?>
     <section>
         <div class="container-fluid mb-5">
@@ -20,13 +20,13 @@
                     </p>
                     <div class="row">
                         <div class="col-sm-6 mt-4">
-                            <img src="assets/image.png" class="img-thumbnail" alt="...">
+                            <img src="../assets/image.png" class="img-thumbnail" alt="...">
                         </div>
                         <div class="col-sm-6">
-                            <img src="assets/image (1).png" class="img-thumbnail" alt="...">
+                            <img src="../assets/image (1).png" class="img-thumbnail" alt="...">
                         </div>
                     </div>
-                    <img src="assets/image (2).png" class=" img-thumbnail mt-3 mx-auto" alt="...">
+                    <img src="../assets/image (2).png" class=" img-thumbnail mt-3 mx-auto" alt="...">
                 </div>
                 <div class="col-md-1" style="justify-content: center; align-items: center; display: flex; flex-direction: column;">
                     <div class="vertical-line" style="height: 80%; width: 1px;">
@@ -37,22 +37,22 @@
 
                     <div class="row">
                         <div class="col-sm-6 mt-4" style="justify-content: end; align-items: end; display: flex; ">
-                            <img src="assets/image1.png" class="img-thumbnail" style="border: none;" alt="...">
+                            <img src="../assets/image1.png" class="img-thumbnail" style="border: none;" alt="...">
                         </div>
                         <div class="col-sm-6" style=" border: none;">
-                            <img src="assets/image-3.png" class="img-thumbnail" style="border: none;" alt="...">
+                            <img src="../assets/image-3.png" class="img-thumbnail" style="border: none;" alt="...">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 mt-4" style="justify-content: end; align-items: end; display: flex;">
-                            <img src="assets/image-2.png" class="img-thumbnail" style="border: none;" alt="...">
+                            <img src="../assets/image-2.png" class="img-thumbnail" style="border: none;" alt="...">
                         </div>
                         <div class="col-sm-6" style=" border: none;">
-                            <img src="assets/image-1.png" class="img-thumbnail" style="border: none;" alt="...">
+                            <img src="../assets/image-1.png" class="img-thumbnail" style="border: none;" alt="...">
                         </div>
                     </div>
                     <h3 class="sub-title mt-5">
-                        How <a style="color: #BB8446;">can we</a> help you ? <img src="assets/caution-icon.png"
+                        How <a style="color: #BB8446;">can we</a> help you ? <img src="../assets/caution-icon.png"
                             class="img-thumbnail"
                             style="border: none; background-color: transparent; width: 70px; justify-content: center; align-items: center;"
                             alt="...">
@@ -71,5 +71,5 @@
         </div>
     </section>
 <?php 
-    include './inc/inc_footer.php'; 
+    include '../inc/inc_footer.php'; 
 ?>

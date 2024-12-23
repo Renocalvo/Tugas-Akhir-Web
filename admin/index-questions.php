@@ -1,7 +1,7 @@
 <?php
-require_once 'inc/inc_connection.php';
+require_once '../inc/inc_connection.php';
 $pageTitle = "Manage Questions - Healpoint";
-include './inc/inc_adminheader.php';
+include '../inc/inc_adminheader.php';
 
 $records_per_page = 10;
 
@@ -85,7 +85,8 @@ $total_pages = ceil($total_records / $records_per_page);
                     <td><?= htmlspecialchars($question['answer6']) ?></td>
                     <td>
                         <!-- Edit Button -->
-                        <a href="edit-question.php?id=<?= $question['id'] ?>" class="btn btn-primary btn-sm" title="Edit">
+                       <div class="row" style="gap: 10px;">
+                       <a href="edit-question.php?id=<?= $question['id'] ?>" class="btn btn-primary btn-sm" title="Edit">
                             <i class="fas fa-pencil-alt"></i>
                         </a>
                         <!-- Delete Button -->
@@ -95,6 +96,7 @@ $total_pages = ceil($total_records / $records_per_page);
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                         </form>
+                       </div>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -139,4 +141,4 @@ $total_pages = ceil($total_records / $records_per_page);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-<?php include './inc/inc_adminfooter.php'; ?>
+<?php include '../inc/inc_adminfooter.php'; ?>

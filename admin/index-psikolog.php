@@ -1,7 +1,7 @@
 <?php
-require_once 'inc/inc_connection.php';
+require_once '../inc/inc_connection.php';
 $pageTitle = "layanan Page - Healpoint";
-include './inc/inc_adminheader.php'; 
+include '../inc/inc_adminheader.php'; 
 
 
 
@@ -84,7 +84,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </td>
                     <td class="actions">
                         <!-- Edit Button with Pencil Icon -->
-                        <form action="edit.php" method="GET" style="display:inline;">
+                        <form action="edit-psikolog.php" method="GET" style="display:inline;">
                             <input type="hidden" name="id" value="<?= $row['psychologist_id'] ?>">
                             <button type="submit" class="btn btn-primary btn-sm" title="Edit">
                                 <i class="fas fa-pencil-alt"></i>
@@ -142,5 +142,5 @@ while ($row = mysqli_fetch_assoc($result)) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <?php 
-    include './inc/inc_adminfooter.php'; 
+    include '../inc/inc_adminfooter.php'; 
 ?>
