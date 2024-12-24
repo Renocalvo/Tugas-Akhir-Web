@@ -58,7 +58,7 @@
                     $email = $_POST["email"];
                     $password = $_POST["password"];
 
-                    require_once "./inc/inc_connection.php";
+                    require_once "../inc/inc_connection.php";
 
                     $sql = "SELECT * from users where email = '$email'";
                     $result = mysqli_query($koneksi, $sql);
@@ -73,7 +73,7 @@
 
                             // Redirect berdasarkan role
                             if ($user['role'] === 'Admin') {
-                                header("Location: index-users.php");
+                                header("Location: ../admin/index-users.php");
                             } elseif ($user['role'] === 'User') {
                                 header("Location: landingpage.php");
                             } else {

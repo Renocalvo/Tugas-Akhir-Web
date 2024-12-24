@@ -42,13 +42,7 @@ body {
   flex: 1;
 }
 
-.footer {
-  position: fixed;
-  background-color:  rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
-  text-align: center;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan shadow pada footer */
-}
+
 
 .profile-img img {
   max-width: 80px;
@@ -82,20 +76,6 @@ body {
 /*--------------------------------------------------------------
 # Footer Styling
 --------------------------------------------------------------*/
-
-.footer .copyright {
-  margin-bottom: 5px;
-}
-
-.footer .credits {
-  font-size: 13px;
-  color: rgba(39, 40, 41, 0.6);
-}
-
-.footer .credits a {
-  color: var(--accent-color);
-  text-decoration: underline;
-}
 
 /*--------------------------------------------------------------
 # .article Styling (Main Content Area)
