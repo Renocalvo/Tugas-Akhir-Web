@@ -5,7 +5,7 @@
                 <div class="row" style="background-color: white; padding: 30px 0 20px 0;">
 
                     <div class="col-md-3 pl-5">
-                        <img src="assets/layananpage.png" width="130" style="background-color: transparent; border: none;"
+                        <img src="../assets/layananpage.png" width="130" style="background-color: transparent; border: none;"
                             class="img-thumbnail" alt="...">
                     </div>
 
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 pl-5">
-                        <img src="assets/layananpage1.png" width="200" class="img-thumbnail"
+                        <img src="../assets/layananpage1.png" width="200" class="img-thumbnail"
                             style="background-color: transparent; border: none;" alt="...">
                     </div>
                 </div>

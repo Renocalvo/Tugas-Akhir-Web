@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"> 
     <title>Login Page</title>
 
     <script>
@@ -43,8 +43,8 @@
     </script>
 </head>
 
-<body style="background:url(assets/background.png); background-size: cover;">
-    <div id="snackbar" class="snackbar">This is a snackbar alert!</div>
+<body style="background:url(../assets/background.png); background-size: cover;">
+    <div id="snackbar" class="snackbar"></div>
 
     <div class="jumbotron" style="background-color: transparent; margin-bottom: 0;">
         <div class="container-fluid p-5" style="background-color: rgba(0, 0, 0, 0.425); max-width: 80vh; padding: 2vh;">
@@ -58,7 +58,7 @@
                     $email = $_POST["email"];
                     $password = $_POST["password"];
 
-                    require_once "./inc/inc_connection.php";
+                    require_once "../inc/inc_connection.php";
 
                     $sql = "SELECT * from users where email = '$email'";
                     $result = mysqli_query($koneksi, $sql);
@@ -73,7 +73,7 @@
 
                             // Redirect berdasarkan role
                             if ($user['role'] === 'Admin') {
-                                header("Location: index-users.php");
+                                header("Location: ../admin/index-users.php");
                             } elseif ($user['role'] === 'User') {
                                 header("Location: landingpage.php");
                             } else {

@@ -16,6 +16,7 @@ $total_query = "SELECT COUNT(*) AS total FROM psychologists";
 $total_result = mysqli_query($koneksi, $total_query);
 $total_row = mysqli_fetch_assoc($total_result);
 $total_records = $total_row['total'];
+$imageBasePath = '../';
 $total_pages = ceil($total_records / $records_per_page);
 
 // Query to fetch data with pagination
@@ -77,7 +78,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <td><?= htmlspecialchars($row['psychologist_contact']) ?></td>
                     <td>
                         <?php if (!empty($row['image_path'])): ?>
-                            <img src="<?= htmlspecialchars($row['image_path']) ?>" alt="Psychologist Image" style="max-width: 100px; height: auto;">
+                            <img src="<?= htmlspecialchars($imageBasePath . $row['image_path']) ?>" alt="Psychologist Image" style="max-width: 100px; height: auto;">
                         <?php else: ?>
                             No Image
                         <?php endif; ?>
