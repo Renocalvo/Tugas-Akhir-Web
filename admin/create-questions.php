@@ -1,3 +1,7 @@
+<?php
+$pageTitle = "layanan Page - Healpoint";
+include '../inc/inc_adminheader.php';
+?>
 <main>
     <section>
         <div class="container px-5 py-5 mb-5">
@@ -163,3 +167,6 @@
         });
     });
 </script>
+<?php
+include '../inc/inc_adminfooter.php';
+?>

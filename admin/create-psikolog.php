@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "layanan Page - Healpoint";
-include './inc/inc_adminheader.php';
+include '../inc/inc_adminheader.php';
 ?>
 <link rel="stylesheet" href="../assets/css/main.css">
 <main>

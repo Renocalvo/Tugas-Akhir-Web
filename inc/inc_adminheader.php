@@ -22,19 +22,20 @@ if (!$user || $user['role'] !== 'Admin') {
 
 function logout()
 {
+    // Menghapus session
     session_unset();  
     session_destroy(); 
-
-    setcookie(session_name(), '', time() - 3600, '/');  // Menghapus cookie sesi jika digunakan
-
-
-    header("Location: ../users/login.php", true, 302);
+    
+    // Menghapus cookie session jika ada
+    setcookie(session_name(), '', time() - 3600, '/');
+    
+    // Kirim respon JSON
+    echo json_encode(['status' => 'success']);
     exit();
-
 }
 
-// Periksa apakah ada permintaan logout
-if (isset($_POST['logout'])) {
+// Periksa apakah permintaan logout ada
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     logout();
 }
 ?>
@@ -96,11 +97,7 @@ if (isset($_POST['logout'])) {
                     <a href="index-questions.php" id="question-link" class="nav-link"><i class="bi bi-question-circle me-2"></i> Questions</a>
                 </li>
                 <li class="nav-item">
-                    <form action="" method="POST" style="display: inline;">
-                        <button type="submit" name="logout" id="logout-link" class="nav-link btn btn-link" style="border: none; background: none;">
-                            <i class="bi bi-box-arrow-right me-2"></i> Logout
-                        </button>
-                    </form>
+                    <a href="logout.php?action=logout" class="nav-link"><i class="bi bi-box-arrow-right me-2"></i> Logout2</a>
                 </li>
 
             </ul>
