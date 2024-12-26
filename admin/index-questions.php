@@ -132,7 +132,8 @@ $total_pages = ceil($total_records / $records_per_page);
 
     <!-- Add New Question Button -->
     <div class="text-center mt-4">
-        <a href="create-question.php?category_id=<?= $selected_category ?>" class="btn btn-success">Add New Question</a>
+        <!-- <a href="create-question.php?category_id=<?= $selected_category ?>" class="btn btn-success">Add New Question</a> -->
+        <a href="create-questions.php" class="btn btn-success">Add New Question</a>
     </div>
 </div>
 

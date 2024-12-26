@@ -42,7 +42,12 @@ body {
   flex: 1;
 }
 
-
+.footer {
+  background-color:  rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan shadow pada footer */
+}
 
 .profile-img img {
   max-width: 80px;

@@ -4,7 +4,7 @@ require_once '../inc/inc_connection.php';
 
 // Periksa apakah pengguna sudah login
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: ../users/login.php");
     exit();
 }
 
@@ -16,22 +16,21 @@ $user = mysqli_fetch_assoc($result);
 
 if (!$user || $user['role'] !== 'Admin') {
     // Jika bukan admin, alihkan ke halaman unauthorized
-    header("Location: login.php");
+    header("Location: ../users/login.php");
     exit();
 }
 
 function logout()
 {
-    // Hapus sesi di server
-    session_unset();  // Hapus semua variabel sesi
-    session_destroy(); // Hancurkan sesi
+    session_unset();  
+    session_destroy(); 
 
-    // Hapus cookie sesi jika ada
     setcookie(session_name(), '', time() - 3600, '/');  // Menghapus cookie sesi jika digunakan
 
-    // Redirect pengguna ke halaman login setelah logout
-    header("Location: login.php");
+
+    header("Location: ../users/login.php", true, 302);
     exit();
+
 }
 
 // Periksa apakah ada permintaan logout

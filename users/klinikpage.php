@@ -49,11 +49,13 @@
                     $contact = htmlspecialchars($row['contact']);
                     $imagePath = $row['image_path'] ? htmlspecialchars($row['image_path']) : 'https://via.placeholder.com/150';
                     $whatsappLink = "https://wa.me/" . preg_replace('/[^0-9]/', '', $contact);
+                    $imageBasePath = '../';
+                    $finalImagePath = $imageBasePath . $imagePath;
 
                     echo '
                         <div class="col-md-4 mb-5 d-flex justify-content-center">
                             <div class="profile-card">
-                                <img src="' . $imagePath . '" class="card-img-top" alt="Psikolog Image">
+                                <img src="' . $finalImagePath . '" class="card-img-top" alt="Psikolog Image">
                                 <div class="card-body">
                                     <h5 class="card-title">' . $name . '</h5>
                                     <p class="card-text" style="font-size:13px">' . $specialization . '</p>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/style.css">
+
 
 <footer class="text-center text-lg-start" style="background-color: #001547;">
     <div class="container d-flex justify-content-center py-5">
