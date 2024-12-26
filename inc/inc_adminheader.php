@@ -60,11 +60,11 @@ if (isset($_POST['logout'])) {
 <body>
     <div class="main-container">
         <!-- Sidebar -->
-        <nav class="col-md-3 col-lg-2 sidenav d-flex flex-column p-3">
+        <nav class="col-md-2  sidenav d-flex flex-column p-3">
             <!-- Logo -->
-            <a class="navbar-brand" href="landingpage.php">
+            <a class="navbar-brand" href="../users/landingpage.php">
                 <img src="../assets/logo.png" width="80" height="80" alt="">
-                <span style="font-size:30px; font-weight:bolder; margin-left:-20px; color:grey;">Healpoint</span>
+                <span style="font-size:25px; font-weight:bolder; margin-left:-20px; color:grey;">Healpoint</span>
             </a>
 
             <!-- Profile Image -->

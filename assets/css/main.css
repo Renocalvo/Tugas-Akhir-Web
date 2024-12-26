@@ -82,20 +82,6 @@ body {
 # Footer Styling
 --------------------------------------------------------------*/
 
-.footer .copyright {
-  margin-bottom: 5px;
-}
-
-.footer .credits {
-  font-size: 13px;
-  color: rgba(39, 40, 41, 0.6);
-}
-
-.footer .credits a {
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-
 /*--------------------------------------------------------------
 # .article Styling (Main Content Area)
 --------------------------------------------------------------*/
