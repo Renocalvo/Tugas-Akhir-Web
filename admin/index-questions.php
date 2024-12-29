@@ -9,6 +9,18 @@ $records_per_page = 10;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($page - 1) * $records_per_page;
 
+// Handle delete request
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
+    $delete_id = (int)$_POST['id'];
+
+    $delete_query = "DELETE FROM questions WHERE id = $delete_id";
+    if (mysqli_query($koneksi, $delete_query)) {
+        echo "<div class='alert alert-success'>Question deleted successfully.</div>";
+    } else {
+        echo "<div class='alert alert-danger'>Error deleting question: " . mysqli_error($koneksi) . "</div>";
+    }
+}
+
 // Fetch available categories (like "Burnout")
 $category_query = "SELECT * FROM category";
 $category_result = mysqli_query($koneksi, $category_query);
@@ -85,18 +97,18 @@ $total_pages = ceil($total_records / $records_per_page);
                     <td><?= htmlspecialchars($question['answer6']) ?></td>
                     <td>
                         <!-- Edit Button -->
-                       <div class="row" style="gap: 10px;">
-                       <a href="edit-question.php?id=<?= $question['id'] ?>" class="btn btn-primary btn-sm" title="Edit">
-                            <i class="fas fa-pencil-alt"></i>
-                        </a>
-                        <!-- Delete Button -->
-                        <form action="delete-question.php" method="POST" style="display:inline;">
-                            <input type="hidden" name="id" value="<?= $question['id'] ?>">
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this question?');" title="Delete">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </form>
-                       </div>
+                        <div class="row" style="gap: 10px;">
+                            <a href="edit-question.php?id=<?= $question['id'] ?>" class="btn btn-primary btn-sm" title="Edit">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                            <!-- Delete Button -->
+                            <form action="" method="POST" style="display:inline;">
+                                <input type="hidden" name="id" value="<?= $question['id'] ?>">
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this question?');" title="Delete">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -132,7 +144,6 @@ $total_pages = ceil($total_records / $records_per_page);
 
     <!-- Add New Question Button -->
     <div class="text-center mt-4">
-        <!-- <a href="create-question.php?category_id=<?= $selected_category ?>" class="btn btn-success">Add New Question</a> -->
         <a href="create-questions.php" class="btn btn-success">Add New Question</a>
     </div>
 </div>

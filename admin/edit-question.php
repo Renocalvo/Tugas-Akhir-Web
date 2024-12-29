@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ";
 
     if (mysqli_query($koneksi, $update_query)) {
-        header("Location: manage-questions.php?message=Question+updated+successfully");
+        header("Location: index-questions.php?message=Question+updated+successfully");
         exit();
     } else {
         die("Update failed: " . mysqli_error($koneksi));
