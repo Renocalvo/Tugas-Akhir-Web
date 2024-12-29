@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <title>Sign Up Page</title>
 
     <script>
@@ -74,7 +74,7 @@
                         array_push($errors, "Password does not match");
                     }
 
-                    require_once "./inc/inc_connection.php";
+                    require_once "../inc/inc_connection.php";
                     $sql = "SELECT * FROM users WHERE email = '$email'";
                     $result = mysqli_query($koneksi, $sql);
                     $rowCount = mysqli_num_rows($result);
@@ -100,7 +100,7 @@
             showSnackbar(['You are registered successfully.'], 'success');
             setTimeout(function() {
                 window.location.href = 'login.php';
-            }, 3000); // Delay of 3 seconds
+            }, 2000); // Delay of 3 seconds
             </script>";
                         } else {
                             die("Something went wrong");

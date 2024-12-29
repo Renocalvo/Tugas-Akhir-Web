@@ -1,7 +1,7 @@
 <?php
 require_once '../inc/inc_connection.php';
 $pageTitle = "layanan Page - Healpoint";
-include '../inc/inc_adminheader.php'; 
+include '../inc/inc_adminheader.php';
 
 
 
@@ -52,6 +52,53 @@ $results = [];
 while ($row = mysqli_fetch_assoc($result)) {
     $results[] = $row;
 }
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
+    $id = (int)$_POST['id'];
+
+    // Validasi koneksi database
+    if (!$koneksi) {
+        error_log("Database connection failed: " . mysqli_connect_error());
+        header("Location: index-psikolog.php?error=Database+connection+failed");
+        exit();
+    }
+
+    // Mulai transaksi
+    mysqli_begin_transaction($koneksi);
+
+    try {
+        // Hapus dari tabel psychologist_images
+        $delete_images_query = "DELETE FROM psychologist_images WHERE psychologist_id = ?";
+        $stmt_images = mysqli_prepare($koneksi, $delete_images_query);
+        mysqli_stmt_bind_param($stmt_images, 'i', $id);
+        if (!mysqli_stmt_execute($stmt_images)) {
+            throw new Exception("Failed to delete images: " . mysqli_error($koneksi));
+        }
+        mysqli_stmt_close($stmt_images);
+
+        // Hapus dari tabel psychologists
+        $delete_psychologists_query = "DELETE FROM psychologists WHERE id = ?";
+        $stmt_psychologists = mysqli_prepare($koneksi, $delete_psychologists_query);
+        mysqli_stmt_bind_param($stmt_psychologists, 'i', $id);
+        if (!mysqli_stmt_execute($stmt_psychologists)) {
+            throw new Exception("Failed to delete psychologist: " . mysqli_error($koneksi));
+        }
+        mysqli_stmt_close($stmt_psychologists);
+
+        // Commit transaksi
+        mysqli_commit($koneksi);
+
+        // Redirect ke halaman utama dengan pesan sukses
+        header("Location: index-psikolog.php?success=Psychologist+deleted+successfully");
+        exit();
+    } catch (Exception $e) {
+        // Rollback transaksi jika ada error
+        mysqli_rollback($koneksi);
+        error_log($e->getMessage());
+        header("Location: index-psikolog.php?error=Failed+to+delete+psychologist");
+        exit();
+    }
+}
 ?>
 
 <div class="container my-4">
@@ -92,7 +139,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                             </button>
                         </form>
                         <!-- Delete Button with Trash Icon -->
-                        <form action="delete.php" method="POST" style="display:inline;">
+                        <form action="" method="POST" style="display:inline;">
                             <input type="hidden" name="id" value="<?= $row['psychologist_id'] ?>">
                             <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this psychologist?');" title="Delete">
                                 <i class="fas fa-trash-alt"></i>
@@ -142,6 +189,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-<?php 
-    include '../inc/inc_adminfooter.php'; 
+<?php
+include '../inc/inc_adminfooter.php';
 ?>

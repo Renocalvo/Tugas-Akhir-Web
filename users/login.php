@@ -73,7 +73,7 @@
 
                             // Redirect berdasarkan role
                             if ($user['role'] === 'Admin') {
-                                header("Location: ../admin/index-users.php");
+                                header("Location: ../admin/index-home.php");
                             } elseif ($user['role'] === 'User') {
                                 header("Location: landingpage.php");
                             } else {

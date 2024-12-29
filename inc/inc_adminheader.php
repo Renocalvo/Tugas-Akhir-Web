@@ -19,25 +19,6 @@ if (!$user || $user['role'] !== 'Admin') {
     header("Location: ../users/login.php");
     exit();
 }
-
-function logout()
-{
-    // Menghapus session
-    session_unset();  
-    session_destroy(); 
-    
-    // Menghapus cookie session jika ada
-    setcookie(session_name(), '', time() - 3600, '/');
-    
-    // Kirim respon JSON
-    echo json_encode(['status' => 'success']);
-    exit();
-}
-
-// Periksa apakah permintaan logout ada
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    logout();
-}
 ?>
 
 <!DOCTYPE html>
@@ -88,6 +69,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- Navigation Menu -->
             <ul class="nav flex-column mt-4">
                 <li class="nav-item">
+                    <a href="index-home.php" id="users-link" class="nav-link"><i class="bi bi-house-door me-2"></i> Home</a>
+                </li>
+                <li class="nav-item">
                     <a href="index-users.php" id="users-link" class="nav-link"><i class="bi bi-people me-2"></i> Users</a>
                 </li>
                 <li class="nav-item">
@@ -95,9 +79,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </li>
                 <li class="nav-item">
                     <a href="index-questions.php" id="question-link" class="nav-link"><i class="bi bi-question-circle me-2"></i> Questions</a>
-                </li>
-                <li class="nav-item">
-                    <a href="logout.php?action=logout" class="nav-link"><i class="bi bi-box-arrow-right me-2"></i> Logout2</a>
                 </li>
 
             </ul>
