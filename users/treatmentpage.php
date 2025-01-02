@@ -2,7 +2,6 @@
     $pageTitle = "Treatment Page - Healpoint";
     include '../inc/inc_header.php'; 
 ?>
-<div class="mb-5" style="padding: 0 100px 0 100px;">
   <section>
     <div class="container-fluid mt-5">
       <div class="row">
@@ -72,12 +71,11 @@
           </div>
         </div>
         <div class="col-md-5 ml-5 mt-5" style="align-items: center; justify-content: center;">
-          <img src="../assets/treatmentpage.png" class="img-thumbnail" alt="..." style="width: 100%; height: 50vh; border:none">
+          <img src="../assets/treatmentpage.png" class="img-thumbnail img-treatment" alt="..." style="width: 100%; height: 50vh; border:none">
         </div>
       </div>
     </div>
   </section>
-</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {

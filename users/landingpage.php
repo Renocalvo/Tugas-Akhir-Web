@@ -20,35 +20,34 @@
                     </p>
                     <div class="row">
                         <div class="col-sm-6 mt-4">
-                            <img src="../assets/image.png" class="img-thumbnail" alt="...">
+                            <img src="../assets/image.png" class="img-thumbnail img-poster" alt="...">
                         </div>
                         <div class="col-sm-6">
-                            <img src="../assets/image (1).png" class="img-thumbnail" alt="...">
+                            <img src="../assets/image (1).png" class="img-thumbnail img-poster" alt="...">
                         </div>
                     </div>
-                    <img src="../assets/image (2).png" class=" img-thumbnail mt-3 mx-auto" alt="...">
+                    <img src="../assets/image (2).png" class=" img-thumbnail img-poster mt-3 mx-auto" alt="...">
                 </div>
                 <div class="col-md-1" style="justify-content: center; align-items: center; display: flex; flex-direction: column;">
                     <div class="vertical-line" style="height: 80%; width: 1px;">
                     </div>
-                    <button type="button" class="btn btn-outline-dark mt-3" style="border-radius: 30px; height: 55px; box-shadow: 0 0 5px;"><i class="bi bi-arrow-down"></i></button>
                 </div>
                 <div class="col-md-5">
 
                     <div class="row">
                         <div class="col-sm-6 mt-4" style="justify-content: end; align-items: end; display: flex; ">
-                            <img src="../assets/image1.png" class="img-thumbnail" style="border: none;" alt="...">
+                            <img src="../assets/image1.png" class="img-thumbnail img-poster" style="border: none;" alt="...">
                         </div>
                         <div class="col-sm-6" style=" border: none;">
-                            <img src="../assets/image-3.png" class="img-thumbnail" style="border: none;" alt="...">
+                            <img src="../assets/image-3.png" class="img-thumbnail img-poster" style="border: none;" alt="...">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 mt-4" style="justify-content: end; align-items: end; display: flex;">
-                            <img src="../assets/image-2.png" class="img-thumbnail" style="border: none;" alt="...">
+                            <img src="../assets/image-2.png" class="img-thumbnail img-poster" style="border: none;" alt="...">
                         </div>
                         <div class="col-sm-6" style=" border: none;">
-                            <img src="../assets/image-1.png" class="img-thumbnail" style="border: none;" alt="...">
+                            <img src="../assets/image-1.png" class="img-thumbnail img-poster" style="border: none;" alt="...">
                         </div>
                     </div>
                     <h3 class="sub-title mt-5">

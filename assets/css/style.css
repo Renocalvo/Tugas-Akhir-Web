@@ -41,9 +41,35 @@ input::-webkit-inner-spin-button {
     font-family: "Inria Serif", serif;
 }
 
-.vertical-line {
+.vertical-line-profile {
     height: 30px;
     border: 1px solid black;
+}
+
+.div-username {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .vertical-line-profile {
+        height: 1px;
+        border: 1px solid black;
+        margin: 0 0 10px;
+    }
+
+    .div-username {
+        margin-top: 5px;
+
+    }
+}
+
+@media  (max-width:800px) {
+    .title-healpoint{
+        
+        visibility: hidden;
+    }
+
 }
 
 nav {
@@ -77,6 +103,8 @@ nav {
     opacity: 1;
     color: white;
 }
+
+
 
 /* Snackbar form for login and register*/
 .snackbar {
@@ -139,6 +167,12 @@ nav {
 
 /* end login end register form */
 /* landing page */
+
+.vertical-line {
+    height: 30px;
+    border: 1px solid black;
+}
+
 .tagline {
     text-align: left;
     font-size: 120px;
@@ -168,45 +202,27 @@ nav {
     display: flex;
 }
 
-.card-container {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 25px;
+
+@media (max-width:900px) {
+    .tagline {
+        padding-left: 10px;
+        font-size: 100px;
+    }
 }
 
-.card-content {
-    background-color: white;
-    border-radius: 15px;
-    min-width: 6rem;
-    height: 10rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+@media (max-width: 800px) {
+    .img-poster {
+        display: none;
+    }
 
-
-.card-content img {
-    border-radius: 15px;
-    height: 4.5rem;
-    width: 4.5rem;
-}
-
-.card-content:hover,
-.active {
-    border: 2px solid #BB8446;
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(210, 164, 13, 0.655);
-}
-
-.info-box .box-button {
-    display: none;
+    @media (max-width:768px) {
+        .vertical-line {
+            display: none;
+        }
+    }
 
 }
+
 
 /* layanan page */
 .required-dot {
@@ -252,6 +268,26 @@ nav {
     font-size: 70px;
 }
 
+.div-btn-details{
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width:990px){
+.div-btn-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-klinik{
+    display: none;
+}
+.tag-psikolog{
+    font-size: 50px;
+}
+}
+
 /* end klinikpage*/
 
 /* lihatprofile */
@@ -269,10 +305,76 @@ nav {
     object-fit: cover;
     border-radius: 50%;
 }
+
 /* end lihatprofile */
 
-.about-treatment, .treatment-content{
+.about-treatment,
+.treatment-content {
     font-family: "Milonga", serif;
 
 }
 
+/* treatmentpage */
+
+.card-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 25px;
+}
+
+.card-content {
+    background-color: white;
+    border-radius: 15px;
+    min-width: 6rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-content img {
+    border-radius: 15px;
+    height: 4.5rem;
+    width: 4.5rem;
+}
+
+.card-content:hover,
+.active {
+    border: 2px solid #BB8446;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(210, 164, 13, 0.655);
+}
+
+.info-box .box-button {
+    display: none;
+
+}
+@media (max-width:900px){
+    .img-treatment{
+        display: none;
+    }
+    @media (max-width: 576px) {
+        .box-button{
+            gap: 10px;
+        }
+        .card-container {
+          flex-direction: column;
+          align-items: center;
+        }
+          
+        .card-content {
+          width: 80%;
+        }
+      
+        .info-box .box-button {
+          flex-direction: column;
+        }
+      }
+    
+}  

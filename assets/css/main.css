@@ -104,11 +104,11 @@ body {
     font-family: "Milonga", serif;
 }
 
-.actions {
+.box-actions {
   display: flex;
   gap: 10px;
 }
-.actions button {
+.box-actions button {
   padding: 5px 10px;
   cursor: pointer;
 }
@@ -116,6 +116,13 @@ img {
   max-width: 100px;
   height: auto;
 }
+
+.title-healpoint{
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+
 /*--------------------------------------------------------------
 # Responsive Design
 --------------------------------------------------------------*/
@@ -144,7 +151,14 @@ img {
     align-items: center;
     cursor: pointer;
   }
+
+  .title-healpoint{
+    visibility: hidden;
+    display: none;
+  }
 }
+
+
 
 @media (min-width: 1200px) {
   .header {

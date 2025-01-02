@@ -44,9 +44,9 @@ if (!$user || $user['role'] !== 'Admin') {
         <!-- Sidebar -->
         <nav class="col-md-2  sidenav d-flex flex-column p-3">
             <!-- Logo -->
-            <a class="navbar-brand" href="../users/landingpage.php">
-                <img src="../assets/logo.png" width="80" height="80" alt="">
-                <span style="font-size:25px; font-weight:bolder; margin-left:-20px; color:grey;">Healpoint</span>
+            <a class="navbar-brand" href="../users/landingpage.php" style="font-size: 30px; justify-content: center; display: flex; align-items:center">
+            <img src="../assets/logo.png" width="60" height="60" alt="">
+            <p class="title-healpoint">Healpoint</p>
             </a>
 
             <!-- Profile Image -->

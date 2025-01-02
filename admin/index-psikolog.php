@@ -132,6 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
                     </td>
                     <td class="actions">
                         <!-- Edit Button with Pencil Icon -->
+                        <div class="box-actions">
                         <form action="edit-psikolog.php" method="GET" style="display:inline;">
                             <input type="hidden" name="id" value="<?= $row['psychologist_id'] ?>">
                             <button type="submit" class="btn btn-primary btn-sm" title="Edit">
@@ -145,6 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                         </form>
+                        </div>
                     </td>
                 </tr>
             <?php endforeach; ?>
