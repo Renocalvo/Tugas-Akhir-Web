@@ -6,7 +6,7 @@
     <div class="container-fluid mt-5" style="background-color:white;">
         <div class="row" style="background-color: white; padding: 30px 0 20px 0;">
             <div class="col-md-3 pl-5">
-                <img src="../assets/layananpage.png" width="200" class="img-thumbnail"
+                <img src="../assets/layananpage.png" width="200" class="img-thumbnail img-klinik"
                     style="background-color: transparent; border: none;" alt="...">
             </div>
             <div class="col-md-6">
@@ -19,7 +19,7 @@
             </div>
             <div class="col-md-3 pl-5">
                 <img src="../assets/layananpage1.png" width="270" style="background-color: transparent; border: none;"
-                    class="img-thumbnail" alt="...">
+                    class="img-thumbnail img-klinik" alt="...">
             </div>
         </div>
     </div>
@@ -58,13 +58,10 @@
                                     <h5 class="card-title">' . $name . '</h5>
                                     <p class="card-text" style="font-size:13px">' . $specialization . '</p>
                                 </div>
-                                <div class="row mb-3">
-                                    <div class="col-6">
-                                        <a href="lihatprofile.php?id=' . $row['id'] . '" class="btn btn-primary"  style="background-color:#FF9292; width:100px; border:none; border-radius: 16px;">Detail</a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="' . $whatsappLink . '" class="btn btn-primary"  style="background-color:#92C9FF; width:100px; border:none; border-radius: 16px;">Contact</a>
-                                    </div>
+                                <div class="row mb-3 div-btn-details">
+                                      <a href="lihatprofile.php?id=' . $row['id'] . '" class="btn btn-primary"  style="background-color:#FF9292; width:100px; border:none; border-radius: 16px;">Detail</a>
+                                    <a href="' . $whatsappLink . '" class="btn btn-primary"  style="background-color:#92C9FF; width:100px; border:none; border-radius: 16px;">Contact</a>
+                                    
                                 </div>
                             </div>
                         </div>

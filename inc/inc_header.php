@@ -25,8 +25,9 @@ if (!isset($_SESSION['user_id'])) {
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto">
-        <a class="navbar-brand" href="landingpage.php" style="font-size: 30px;">
-            <img src="../assets/logo.png" width="80" height="80" alt=""> Healpoint
+        <a class="navbar-brand" href="landingpage.php" style="font-size: 30px; justify-content: center; display: flex; align-items:center">
+            <img src="../assets/logo.png" width="80" height="80" alt="">
+            <p class="title-healpoint">Healpoint</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,12 +45,13 @@ if (!isset($_SESSION['user_id'])) {
                     <a class="nav-link" href="treatmentpage.php">Treatment</a>
                 </li>
             </ul>
-            <div class="vertical-line mr-3"></div>
-            <?php if (!isset($_SESSION['user_id'])): ?>
+            <div class="vertical-line-profile mr-3"></div>
+           <div class="div-username">
+           <?php if (!isset($_SESSION['user_id'])): ?>
                 <!-- Tampilkan tombol "Login" jika pengguna belum login -->
                 <a href="login.php" class="button-login ml-2 mr-3" style="text-decoration: none; color: black;">Login</a>
                 <img src="./assets/default-profile.png" style="max-width: 40px; border-radius: 50%; border: none;"
-                    class="img-thumbnail m-2" alt="...">
+                    class="img-thumbnail img-profile m-2" alt="...">
             <?php else: ?>
                 <!-- Tampilkan informasi pengguna jika sudah login -->
                 <div class="hero-avatar-profile mr-3">
@@ -62,8 +64,9 @@ if (!isset($_SESSION['user_id'])) {
                 <img src="<?php echo $imagePath; ?>" 
                     onerror="this.onerror=null; this.src='<?php echo $defaultImage; ?>';" 
                     style="max-width: 40px; border-radius: 50%; border: none;" 
-                    class="img-thumbnail m-2" 
+                    class="img-thumbnail img-profile m-2" 
                     alt="Profile Picture">
             <?php endif; ?>
+           </div>
         </div>
     </nav>

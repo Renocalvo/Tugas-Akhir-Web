@@ -84,6 +84,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </td>
                     <td class="actions">
                         <!-- Edit Button with Pencil Icon -->
+                        <div class="box-actions">
                         <form action="edit-psikolog.php" method="GET" style="display:inline;">
                             <input type="hidden" name="id" value="<?= $row['psychologist_id'] ?>">
                             <button type="submit" class="btn btn-primary btn-sm" title="Edit">
@@ -97,6 +98,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                         </form>
+                        </div>
                     </td>
                 </tr>
             <?php endforeach; ?>
