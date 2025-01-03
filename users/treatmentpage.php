@@ -3,9 +3,9 @@
     include '../inc/inc_header.php'; 
 ?>
   <section>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid my-5">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 px-5">
           <h3 class="tag-feeling">
             Apa yang sedang ka<a style="color: #BB8446;">mu rasakan saat ini ?</a>
           </h3>

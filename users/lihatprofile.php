@@ -27,6 +27,8 @@
             $contact = htmlspecialchars($row['contact']);
             $imagePath = $row['image_path'] ? htmlspecialchars($row['image_path']) : 'https://via.placeholder.com/150';
             $whatsappLink = "https://wa.me/" . preg_replace('/[^0-9]/', '', $contact);
+            $imageBasePath = '../';
+            $finalImagePath = $imageBasePath . $imagePath;
         } else {
             echo "<p class='text-center'>Psikolog tidak ditemukan.</p>";
             exit;
@@ -41,7 +43,7 @@
     <section>
         <div class="container-fluid my-5" style=" display: flex; align-items: center;">
             <div class="container container-profile bg-white border-rounded shadow">
-                <img src="<?php echo $imagePath; ?>" class="img-thumbnail picture-view" alt="Psikolog Image">
+                <img src="<?php echo $finalImagePath; ?>" class="img-thumbnail picture-view" alt="Psikolog Image">
                
                 <h2 class="psikologis-name">
                 <?php echo $name; ?>

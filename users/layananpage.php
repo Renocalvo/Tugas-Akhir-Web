@@ -13,7 +13,7 @@
                 <div class="container container-title-layanan">
                     <h2 class="text-center mt-5"
                         style=" background: linear-gradient(90deg, #000, #BB8446); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                        Tes Psikologi Burn-out</h2>
+                        Tes Psikologi</h2>
                     <hr style=" border-width: 3px; width: 100%; background-color: #000;">
                 </div>
             </div>
